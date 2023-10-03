@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Survey Form</title>
+
+<style>
+
+/* Styling the Body element i.e. Color,
+        Font, Alignment */
+body {
+	background-color: #008000;
+	font-family: Verdana;
+	text-align: center;
+}
+
+/* Styling the Form (Color, Padding, Shadow) */
+form {
+	background-color: #FFD700;
+	max-width: 500px;
+	margin: 50px auto;
+	padding: 30px 20px;
+	box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling form-control Class */
+.form-control {
+	text-align: left;
+	margin-bottom: 25px;
+}
+
+/* Styling form-control Label */
+.form-control label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+/* Styling form-control input,
+        select, textarea */
+.form-control input, .form-control select, .form-control textarea {
+	border: 1px solid #777;
+	border-radius: 2px;
+	font-family: inherit;
+	padding: 10px;
+	display: block;
+	width: 95%;
+}
+
+/* Styling form-control Radio
+        button and Checkbox */
+.form-control input[type="radio"], .form-control input[type="checkbox"]
+	{
+	display: inline-block;
+	width: auto;
+}
+
+/* Styling Button */
+button {
+	background-color: #008000;
+	border: 1px solid #777;
+	border-radius: 2px;
+	font-family: inherit;
+	font-size: 21px;
+	display: block;
+	width: 100%;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	color : #FFD700;
+}
+
+</style>
+</head>
+
+<body>
+	<h1 style="background-color:#FFD700;color:#008000">Student Survey Form</h1>
+
+	<!-- Create Form -->
+	<form id="form">
+
+		<!-- Details -->
+		<div class="form-control">
+			<label for="firstname" id="label-firstname"> First Name </label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="firstname" placeholder="Enter your first name"
+				required />
+		</div>
+
+		<div class="form-control">
+			<label for="lastname" id="label-lastname"> Last Name </label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="lastname" placeholder="Enter your last name"
+				required />
+		</div>
+
+		<div class="form-control">
+			<label for="sadd" id="label-sadd"> Street Address </label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="sadd" placeholder="Enter your street address"
+				required />
+		</div>
+
+		<div class="form-control">
+			<label for="city" id="label-city"> City </label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="city" placeholder="Enter your City" required />
+		</div>
+
+		<div class="form-control">
+			<label for="state" id="label-state"> State </label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="state" placeholder="Enter your State" required />
+		</div>
+
+		<div class="form-control">
+			<label for="zipcode" id="label-zipcode"> Zip Code </label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="zipcode" placeholder="Enter your Zip Code"
+				required />
+		</div>
+
+		<div class="form-control">
+			<label for="telephone" id="label-telephone"> Telephone Number </label>
+
+			<!-- Input Type Text -->
+			<input type="text" id="telephone"
+				placeholder="Enter your Telephone Number" required />
+		</div>
+
+		<div class="form-control">
+			<label for="email" id="label-email"> Email </label>
+
+			<!-- Input Type Email-->
+			<input type="email" id="email" placeholder="Enter your email" />
+		</div>
+
+		<div class = "form-control">
+			<label for="date" id="label-date">Date Of Survey</label> 
+			<input
+				type="date" name="dateOfSurvey" required>
+		</div>
+
+		<div class="form-control">
+			<label>What you liked most about the campus?  <small>(Check
+					all that apply)</small>
+			</label>
+			<!-- Input Type Checkbox -->
+			<label for="inp-1"> <input type="checkbox" name="inp">students</input></label>
+			<label for="inp-2"> <input type="checkbox" name="inp">location</input></label>
+			<label for="inp-3"> <input type="checkbox" name="inp">campus</input></label>
+			<label for="inp-4"> <input type="checkbox" name="inp">atmosphere</input></label>
+			<label for="inp-5"> <input type="checkbox" name="inp">dorm rooms</input></label>
+			<label for="inp-6"> <input type="checkbox" name="inp">sports</input></label>
+		</div>		
+
+		<div class="form-control">
+			<label for="source" id="label-source"> How you became interested in the university? </label>
+
+			<!-- Input Type Radio Button -->
+			<label for="source-1"> <input type="radio" id="source-1"
+				name="source">friends</input>
+			</label> <label for="source-2"> <input type="radio" id="source-2"
+				name="source">television</input>
+			</label> <label for="source-3"> <input type="radio" id="source-3"
+				name="source">Internet</input>
+			</label>
+			</label> <label for="source-3"> <input type="radio" id="source-3"
+				name="source">Other</input>
+			</label>
+		</div>
+		
+		<div class="form-control">
+			<label for="recommend" id="label-recommend"> How likely are you to recommend this school
+to other prospective students ?</label>
+
+			<!-- Dropdown options -->
+			<select name="recommend" id="recommend">
+				<option value="recommend-1">Very Likely</option>
+				<option value="recommend-2">Likely</option>
+				<option value="recommend-3">Unlikely</option>
+			</select>
+		</div>
+
+		<div class="form-control">
+			<label for="raffel"> <b>RAFFLE</b>(Enter at least ten comma separated numbers ranging from 1 through 100. Winner gets a FREE MOVIE TICKET!!!) </label>
+			<input type="text" name="raffle" class="raffleInput" pattern="((\d+,){9}\d+)">
+		
+		</div>
+		
+		  <div class = "form-control">
+   	 		<label for="comments">Please enter additional comments.</label>
+  			
+    
+  			<textarea rows = "6" cols = "120" name = "comments"></textarea>
+  			</div>
+
+		<button type="submit" value="submit">Submit</button>
+		<button type="reset" value="Cancel">Cancel</button>
+	</form>
+</body>
+</html>
