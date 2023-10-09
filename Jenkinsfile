@@ -11,7 +11,7 @@ pipeline {
          steps {
             script{
                sh 'rm -rf *.war'
-               sh 'jar -cvf SWE645HW1.war -C src/main/webapp/ .'
+               sh 'jar -cvf SWE645HW1.war -C WebContent/ .'
                docker.withRegistry('',registryCredential){
                   def customImage = docker.build("aravindvallamkonda1/aravindswe645hw2:${env.TIMESTAMP}")
                }
