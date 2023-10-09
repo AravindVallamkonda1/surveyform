@@ -1,4 +1,4 @@
-FROM tomcat:10.1-jdk11-openjdk
+FROM tomcat:latest
 
 COPY SWE645HW1.war /usr/local/tomcat/webapps/
 
