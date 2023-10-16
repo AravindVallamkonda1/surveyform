@@ -39,12 +39,5 @@ pipeline {
          }
       }
 
-      stage('Deploying to Rancher using Load Balancer as a service') {
-         steps {
-            script{
-               sh "kubectl set image deployment/swe645hw2 container-0=aravindvallamkonda1/aravindswe645hw2:${env.TIMESTAMP}"
-            }
-         }
-      }
    }
 }
